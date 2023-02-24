@@ -1,0 +1,18 @@
+<!-- <div style="height: 100vh; flex: auto"> -->
+  <mat-toolbar color="primary">
+    <h1>Phoneshop</h1>
+  </mat-toolbar>
+  <mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/">Home</a>
+        <a mat-list-item routerLink="/phones">Phone Overview</a>
+        <a mat-list-item routerLink="/addphone">Add Phone</a>
+        <a mat-list-item routerLink="/contact">Contact</a>
+      </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+<!-- </div> -->

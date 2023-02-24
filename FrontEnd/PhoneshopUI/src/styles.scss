@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+// there used to be an id="outer-padding" on the body in index.html 
+// but this will break toolbars/sidenavs
+// #outer-padding{
+//     padding: 1em;
+// }
+mat-drawer-content{
+    padding: 1em;
+}
+
+.flex-justify-left {    
+    display: flex;
+    justify-content: left;
+    padding: 0.5em;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label-small {
+    font-size: small;
+}
+
+.txt-error {
+    color: maroon;
+}
+
+.submit-button {
+    margin: 1em; padding: 0.5em;
+}
+
+//defaults added by angular mats
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//theme is no longer chosen when installing angular materials
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+//needed for mat-icon
+//@import 'https://fonts.googleapis.com/icon?family=Material+Icons';

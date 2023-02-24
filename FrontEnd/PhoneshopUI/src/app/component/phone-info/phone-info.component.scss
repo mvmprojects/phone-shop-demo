@@ -1,0 +1,23 @@
+#bordered-info {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    max-width: 20em;
+}
+
+.info-container-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: small;
+}
+
+.info-container-details>*:first-child {
+    padding-right: 1.5em; 
+}
+
+#link-button {
+    align-self: flex-end; 
+    padding: 0.5em;    
+    margin-left: 10em;
+}

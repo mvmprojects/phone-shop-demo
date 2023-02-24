@@ -1,0 +1,7 @@
+<h2>Phone Overview</h2>
+<ul>
+    <div *ngIf="isLoading"><mat-spinner diameter="50"></mat-spinner></div>
+    <li *ngFor="let phone of phones">
+        <app-phone-info	[phone] = "phone"></app-phone-info>
+    </li>
+</ul>

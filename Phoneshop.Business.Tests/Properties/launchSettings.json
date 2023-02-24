@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Phoneshop.Business.Tests": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\jeroen.dejong\\source\\repos\\Fase1Phoneshop"
+    }
+  }
+}

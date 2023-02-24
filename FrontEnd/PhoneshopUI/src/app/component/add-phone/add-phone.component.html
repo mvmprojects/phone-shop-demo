@@ -1,0 +1,84 @@
+<h2>Add Phone</h2>
+<form [formGroup]="formMain" style="display:flex; flex-direction: column;">
+    <!-- <mat-label>{{labelBrand}}</mat-label> -->
+    <mat-form-field>
+        <input matInput [placeholder]="labelBrand" formControlName="phoneBrand" required type="text">
+    </mat-form-field>
+    <div *ngIf="formMain.controls['phoneBrand'].invalid  && (formMain.controls['phoneBrand'].dirty || formMain.controls['phoneBrand'].touched)">
+        <mat-error *ngIf="formMain.controls['phoneBrand'].errors!['required']">{{requirementWarning}}</mat-error>
+    </div>    
+    <!-- <mat-label>{{labelType}}</mat-label> -->
+    <mat-form-field>
+        <input matInput [placeholder]="labelType" formControlName="phoneType" required type="text">
+    </mat-form-field>    
+    <div *ngIf="formMain.controls['phoneType'].invalid  && (formMain.controls['phoneType'].dirty || formMain.controls['phoneType'].touched)">
+        <mat-error *ngIf="formMain.controls['phoneType'].errors!['required']">{{requirementWarning}}</mat-error>
+    </div>        
+    <!-- <mat-label>{{labelPrice}}</mat-label> -->
+    <mat-form-field>
+        <input matInput [placeholder]="labelPrice" formControlName="phonePrice" required type="text">
+    </mat-form-field>
+    <div class="txt-error" *ngIf="formMain.controls['phonePrice'].invalid  && (formMain.controls['phonePrice'].dirty || formMain.controls['phonePrice'].touched)">
+        <mat-error *ngIf="formMain.controls['phonePrice'].errors!['required']">{{requirementWarning}}</mat-error>
+        <mat-error *ngIf="formMain.controls['phonePrice'].errors!['min']">{{valueWarning}}</mat-error>
+        <mat-error *ngIf="formMain.controls['phonePrice'].errors!['pattern']">{{valueWarning}}</mat-error>
+    </div>            
+    <!-- <mat-label>{{labelStock}}</mat-label> -->
+    <mat-form-field>
+        <input matInput [placeholder]="labelStock" formControlName="phoneStock" required type="text">
+    </mat-form-field>    
+    <div *ngIf="formMain.controls['phoneStock'].invalid  && (formMain.controls['phoneStock'].dirty || formMain.controls['phoneStock'].touched)">
+        <mat-error *ngIf="formMain.controls['phoneStock'].errors!['required']">{{requirementWarning}}</mat-error>
+        <mat-error *ngIf="formMain.controls['phoneStock'].errors!['pattern']">{{valueWarning}}</mat-error>
+    </div>            
+    <!-- <mat-label>{{labelDescription}}</mat-label> -->
+    <mat-form-field>
+        <input matInput [placeholder]="labelDescription" formControlName="phoneDescription" type="text">
+    </mat-form-field>
+    <div>
+        <button mat-raised-button (click)="submitForm" [disabled]="formMain.invalid" class="submit-button">
+            Submit
+        </button>
+    </div>    
+</form>
+<!-- <form [formGroup]="formMain">
+    <p class="label-small">{{labelBrand}}</p>
+    <div>
+        <input type="text" formControlName="phoneBrand" [placeholder]="labelBrand" />
+        <div class="txt-error" *ngIf="formMain.controls['phoneBrand'].invalid  && (formMain.controls['phoneBrand'].dirty || formMain.controls['phoneBrand'].touched)">
+            <div class="label-small" *ngIf="formMain.controls['phoneBrand'].errors!['required']">{{requirementWarning}}</div>
+        </div>
+    </div>
+    <p class="label-small">{{labelType}}</p>
+    <div>
+        <input type="text" formControlName="phoneType" [placeholder]="labelType" />
+        <div class="txt-error" *ngIf="formMain.controls['phoneType'].invalid  && (formMain.controls['phoneType'].dirty || formMain.controls['phoneType'].touched)">
+            <div class="label-small" *ngIf="formMain.controls['phoneType'].errors!['required']">{{requirementWarning}}</div>
+        </div>
+    </div>
+    <p class="label-small">{{labelPrice}}</p>
+    <div>
+        <input type="text" formControlName="phonePrice" [placeholder]=0/>
+        <div class="txt-error" *ngIf="formMain.controls['phonePrice'].invalid  && (formMain.controls['phonePrice'].dirty || formMain.controls['phonePrice'].touched)">
+            <div class="label-small" *ngIf="formMain.controls['phonePrice'].errors!['required']">{{requirementWarning}}</div>
+            <div class="label-small" *ngIf="formMain.controls['phonePrice'].errors!['min']">{{valueWarning}}</div>
+            <div class="label-small" *ngIf="formMain.controls['phonePrice'].errors!['pattern']">{{valueWarning}}</div>
+        </div>
+    </div>
+    <p class="label-small">{{labelStock}}</p>
+    <div>
+        <input type="text" formControlName="phoneStock" [placeholder]=0/>
+        <div class="txt-error" *ngIf="formMain.controls['phoneStock'].invalid  && (formMain.controls['phoneStock'].dirty || formMain.controls['phoneStock'].touched)">
+            <div class="label-small" *ngIf="formMain.controls['phoneStock'].errors!['required']">{{requirementWarning}}</div>
+            <div class="label-small" *ngIf="formMain.controls['phoneStock'].errors!['pattern']">{{valueWarning}}</div>
+        </div>
+    </div>
+    <p class="label-small">{{labelDescription}}</p>
+    <div>
+        <input type="text" formControlName="phoneDescription" [placeholder]="labelDescription" />
+    </div>
+
+    <div>
+        <button (click)="submitForm" [disabled]="formMain.invalid" class="submit-button">Submit</button>
+    </div>
+</form> -->

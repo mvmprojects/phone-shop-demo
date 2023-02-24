@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Phoneshop.Scraper": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\keepe\\source\\repos\\Fase1Phoneshop"
+    }
+  }
+}
