@@ -1,9 +1,20 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import PhoneList from './components/phone-list.vue';
+//import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <PhoneList></PhoneList>
+</template>
+
+<style scoped>
+ul {
+  list-style: none;
+}
+</style>
+
+<!--<template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -82,4 +93,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style>-->
