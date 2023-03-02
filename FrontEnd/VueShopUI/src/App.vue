@@ -5,7 +5,7 @@ import PhoneList from './components/phone-list.vue';
 </script>
 
 <template>
-  <PhoneList></PhoneList>
+  <RouterView></RouterView>
 </template>
 
 <style scoped>

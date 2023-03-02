@@ -20,7 +20,8 @@ function handleClick(){
             Stock: {{ phone.stock }}
         </p>
     </div> 
-    <button @click="handleClick">Show more</button>
+    <!-- <button @click="handleClick">Show more</button> -->
+    <router-link to="/details">Show more</router-link>
 </template>
 
 <style>
