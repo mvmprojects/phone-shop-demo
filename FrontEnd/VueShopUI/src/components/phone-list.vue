@@ -11,7 +11,7 @@ for (let i = 0; i < defaultArr
         brand: { id: 0, name: 'Default brand' },        
         type: 'Default type',
         price: 10,
-        stock: 0,
+        stock: 1,
         description: 'Default description.'
     }
 }
@@ -25,3 +25,12 @@ for (let i = 0; i < defaultArr
         </li>
     </ul>
 </template>
+
+<style scoped>
+ul {
+    list-style: none;
+}
+li {
+    padding-bottom: 1em;
+}
+</style>

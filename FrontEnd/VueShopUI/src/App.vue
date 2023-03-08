@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import PhoneList from './components/phone-list.vue';
 //import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -8,9 +7,22 @@ import PhoneList from './components/phone-list.vue';
   <RouterView></RouterView>
 </template>
 
-<style scoped>
-ul {
-  list-style: none;
+<style>
+.flex-justify-left {    
+    display: flex;
+    justify-content: left;
+    padding: 0.5em;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 </style>
 
