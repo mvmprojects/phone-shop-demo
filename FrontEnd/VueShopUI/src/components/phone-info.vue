@@ -16,7 +16,7 @@ function handleClick(){
             <h3>
             {{ phone.type }} - {{ phone.brand.name }}
             </h3>
-            <div class="info-container-elements">
+            <div class="info-container">
                 <p v-if="phone.price">
                     Price: {{ phone.price }}
                 </p>
@@ -32,27 +32,26 @@ function handleClick(){
 </template>
 
 <style>
-.info-container-elements {
+.info-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     font-size: small;
 }
 
-.info-container-elements>*:first-child {
-    padding-right: 1.5em; 
+.info-container>*:first-child {
+    padding-right: 1em;
 }
 
 #bordered-info {
     border-style: solid;
-    border-radius: 5px;
     border-width: thin;
-    max-width: 25em;
+    border-radius: 5px;
+    max-width: 20em;
 }
 
 #link-button {
     padding: 0.5em;    
-    margin-left: 10em;
-    margin-top: 2.5em;
+    margin-left: auto;
+    margin-top: auto;
 }
 </style>

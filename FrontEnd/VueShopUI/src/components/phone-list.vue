@@ -8,11 +8,11 @@ for (let i = 0; i < defaultArr
     defaultArr[i] =       
     {
         id: 0,
-        brand: { id: 0, name: 'Default brand' },        
-        type: 'Default type',
+        brand: { id: 0, name: 'Demo brand' },        
+        type: 'Demo type',
         price: 10,
         stock: 1,
-        description: 'Default description.'
+        description: 'Demo description.'
     }
 }
 
