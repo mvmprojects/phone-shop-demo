@@ -8,21 +8,16 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-.flex-justify-left {    
-    display: flex;
-    justify-content: left;
-    padding: 0.5em;
-}
-
 .flex-container-row {
-    display: flex;
-    flex-direction: row;
+    display: flex; flex-direction: row;
 }
 
 .flex-container-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex; flex-direction: column;
+}
+
+.flex-grow-auto {
+  flex: 1 1 auto;
 }
 </style>
 

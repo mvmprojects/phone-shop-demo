@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import PhoneInfo from './phone-info.vue';
 
-let defaultArr = new Array(3);
+let defaultArr = new Array(6);
 
 for (let i = 0; i < defaultArr
 .length; i++) {

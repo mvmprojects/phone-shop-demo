@@ -1,22 +1,26 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const props = defineProps(['phone'])
 
 function handleClick(){
-
+    console.log("button pressed");
+    router.push('/details');
 }
 
 </script>
 
 <template>
-<div id="bordered-info" class="flex-justify-left">
+<div id="bordered-info"> 
     <div class="flex-container-row">
-        <p style="font-size: xx-large; padding: 1em;">X</p>
-        <div class="flex-container-column">
+        <p id="placeholder-item">X</p>
+        <div class="flex-container-column flex-grow-auto">
             <h3>
             {{ phone.type }} - {{ phone.brand.name }}
             </h3>
-            <div class="info-container">
+            <div class="info-container-row">
                 <p v-if="phone.price">
                     Price: {{ phone.price }}
                 </p>
@@ -24,34 +28,36 @@ function handleClick(){
                     Stock: {{ phone.stock }}
                 </p>
             </div> 
-            <button id="link-button" @click="handleClick">Show more</button>
-            <!-- <router-link to="/details">Show more</router-link> -->
+            <button id="corner-button" @click="handleClick">Show more</button>
         </div>
     </div>
 </div>
 </template>
 
 <style>
-.info-container {
-    display: flex;
-    flex-direction: row;
+#bordered-info {
+    border-style: solid; border-width: thin;
+    border-radius: 5px;
+    max-width: 20em;
+    padding: 0.5em;
+}
+
+.info-container-row {
+    display: flex; flex-direction: row;
     font-size: small;
 }
 
-.info-container>*:first-child {
+.info-container-row>*:first-child {
     padding-right: 1em;
 }
 
-#bordered-info {
-    border-style: solid;
-    border-width: thin;
-    border-radius: 5px;
-    max-width: 20em;
+#corner-button {
+    padding: 0.5em;
+    margin-top: auto; margin-left: auto;
 }
 
-#link-button {
-    padding: 0.5em;    
-    margin-left: auto;
-    margin-top: auto;
+#placeholder-item {
+    font-size: xx-large; 
+    padding: 1em;
 }
 </style>
