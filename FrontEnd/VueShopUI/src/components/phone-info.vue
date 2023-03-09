@@ -6,8 +6,11 @@ const router = useRouter();
 const props = defineProps(['phone'])
 
 function handleClick(){
-    console.log("button pressed");
-    router.push('/details');
+ 
+    let id = 1;
+    // router.push({ path: `/details/${id}` });
+    // "if possible use `name` and `params` to benefit from automatic URL encoding"
+    router.push({ name: 'details', params: { id } })
 }
 
 </script>
